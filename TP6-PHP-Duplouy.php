@@ -103,7 +103,58 @@ equipe::displays();
     <div style="margin-left: 10%">
         <h2 style='color: green; text-decoration: underline;'>Exercice 3 :</h2>
         <br>
+        <form action="TP6-PHP-Duplouy.php" method="post">
+            Nom : <input type="text" name="nom"/>
+            <br><br>
+            Prénom : <input type="text" name="prenom"/>
+            <br><br>
+            Mail : <input type="text" name="mail"/>
+            <br><br>
+            Age : <select name="age">
+                <option value="">--Age--</option>
+                <option value="0-20">0-20</option>
+                <option value="21-40">21-40</option>
+                <option value="41-60">41-60</option>
+                <option value="60+">60 et +</option>
+            </select>
+            <br><br>
+            Monsieur : <input type="radio" value="monsieur" name="button"/>
+            Madame : <input type="radio" value="madame" name="button"/>
+            <br><br>
+            <input type="submit" value="Envoyer"/>
+
+        </form>
+        <?php
+
+class FormulaireRecup{
+    private $nom;
+    private $prenom;
+    private $mail;
+    private $age;
+    private $genre;
+    function __construct()
+    {
+        $this->nom=$_POST['nom'];
+        $this->prenom=$_POST['prenom'];
+        $this->mail=$_POST['mail'];
+        $this->age=$_POST['age'];
+        $this->genre=$_POST['button'];
+
+    }
+
+    function display() {
+        echo "\nVous êtes ".$this->genre. " ".$this->nom." ".$this->prenom." vous avez entre ".$this->age." votre mail : ".$this->mail." !\n";
+    }
+}
 
 
+if(!empty($_POST['nom'])&&!empty($_POST['prenom'])&&!empty($_POST['button'])) {
+    $test=new FormulaireRecup();
+    $test->display();
+}
+
+?>
     </div>
+    <br>
+    <br>
 

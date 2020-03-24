@@ -72,10 +72,38 @@ equipe::displays();
         <h2 style='color: green; text-decoration: underline;'>Exercice 2 :</h2>
         <br>
         <?php
-        class formulaire{
-
+        class Formulaire
+        {
+            private $html = "";
+            private $interieur = "";
+            function __construct($fichier, $method)
+            {
+                $this->html .= "<form method='$method' action='$fichier'>";
+            }
+            function ajouterzonetexte($text){
+                $this->html .= $text." <input type='text'name='nom6'/><br><br>";
+            }
+            function ajouterbouton(){
+                $this->html .= "<button>Envoyer</button>";
+            }
+            function getform(){
+                return $this->html . "</form>";
+            }
         }
 
+        $p1 = new Formulaire("TP6-PHP-Duplouy.php","post");
+        $p1->ajouterzonetexte("Votre nom :");
+        $p1->ajouterzonetexte("Votre code :");
+        $p1->ajouterbouton();
+        echo $p1->getform();
+
         ?>
+    </div>
+    <hr>
+    <div style="margin-left: 10%">
+        <h2 style='color: green; text-decoration: underline;'>Exercice 3 :</h2>
+        <br>
+
+
     </div>
 

@@ -4,7 +4,7 @@
         background-image: url("fondgris.jpg");
     }
 </style>
-<h1 style='font-size: 260%;  background-color: green'>TP5 : Transmission des données</h1>
+<h1 style='font-size: 260%;  background-color: green'>TP6 : POO (Abstraction et encapsulation)</h1>
 <div style="margin-left: 10%; margin-right: 10%;background-color: lightgray" >
 
     <hr>
@@ -46,7 +46,7 @@ class equipe{
         $this->titre = $titre;
     }
     function __destruct(){
-        echo "Fin \n";
+        //echo "Fin \n";
     }
 
 }
@@ -66,4 +66,16 @@ $testeeee->display();
 echo '<br>';
 equipe::displays();
 ?>
+    </div>
+    <hr>
+    <div style="margin-left: 10%">
+        <h2 style='color: green; text-decoration: underline;'>Exercice 2 :</h2>
+        <br>
+        <?php
+        class formulaire{
+
+        }
+
+        ?>
+    </div>
 

@@ -74,7 +74,7 @@ equipe::displays();
         <?php
         class Formulaire
         {
-            private $html = "";
+            protected $html = "";
             private $interieur = "";
             function __construct($fichier, $method)
             {
@@ -156,5 +156,10 @@ if(!empty($_POST['nom'])&&!empty($_POST['prenom'])&&!empty($_POST['button'])) {
 ?>
     </div>
     <br>
-    <br>
+    <hr>
+    <div style="margin-left: 10%">
+        <h2 style='color: green; text-decoration: underline;'>Exercice 4 :</h2>
+        <br>
+
+    </div>
 
